@@ -51,6 +51,9 @@ header.hero h1 {
     font-weight: 200;   /* Light weight */
     font-size: 5rem;    /* Bigger size */
 } 
+header.hero p {
+  font-size: 16px; 
+}
 
 .navbar {
 overflow: visible; 
@@ -136,7 +139,8 @@ z-index: 10;
 
 p {
  font-family: Georgia, serif;
- padding: 10px;    
+ padding: 10px;   
+ font-size: 16px;  
 }
 
 li {
@@ -173,6 +177,7 @@ main {
 .about-box p {
     margin-bottom: 0.25rem;
     line-height: 1.75;
+    font-size: 16px;
 }
 
 
@@ -334,7 +339,13 @@ div.goals {
 
 @media (max-width: 768px) {
   .flex-item-right, .flex-item-left {
-    flex: 100%;
+    flex: 95%;
+    display: block;
+    margin: 0 auto;  
+  }
+  li {
+    margin-left: 20px; 
+    margin-right: 20px; 
   }
   .flex-container {
     flex-direction: column;
@@ -348,7 +359,7 @@ div.goals {
     height: auto; 
   }
   .navbar {
-    gap: 1.1rem; 
+    gap: 0.8rem; 
     font-size: 1rem; 
   }
   .dropbtn {
@@ -361,6 +372,13 @@ div.goals {
   .project_preview {
     width: 100%; 
   }
+  header.hero h1 {
+    font-size: 3rem; 
+  }
+  header.hero p {
+    font-size: 14rem; 
+  }
+
 }
 
 .flex-text {
