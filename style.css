@@ -53,8 +53,8 @@ header.hero h1 {
 } 
 
 .navbar {
-  overflow: visible; 
-  background-color: #333; /* Dark background color */
+overflow: visible; 
+background-color: #333; /* Dark background color */
 font-family: 'Helvetica Neue', sans-serif;
 font-weight: 200; /* optional: makes it 'light' */
 font-size: 1rem; /* adjust as needed */
@@ -91,9 +91,9 @@ z-index: 10;
   background-color: #333;
   color: white;
   padding: 16px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 200; /* optional: makes it 'light' */
-    font-size: 1rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200; /* optional: makes it 'light' */
+  font-size: 1rem;
   border: none;
   cursor: pointer;
 }
@@ -181,6 +181,20 @@ main {
     color: #6c757d; /* A softer grey */
     margin-top: 0;
     margin-bottom: 0;
+}
+
+img.responsive_large {
+    width: 700px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+img.responsive_small {
+  width: 375px; 
+  height: auto;
+  display: block; 
+  margin: 0 auto; 
 }
 
 .project-preview {
@@ -312,15 +326,37 @@ footer {
     /*padding: 10px;*/
 }
 
-@media (max-width: 800px) {
+div.goals {
+  text-align: left; 
+  margin-right: 80px; 
+  margin-left: 80px; 
+}
+
+@media (max-width: 768px) {
   .flex-item-right, .flex-item-left {
     flex: 100%;
   }
-}
-
-@media (max-width: 800px) {
   .flex-container {
     flex-direction: column;
+  }
+  img.responsive_large {
+    width: 90%; 
+    height: auto; 
+  }
+  img.responsive_small {
+    width: 80%; 
+    height: auto; 
+  }
+  .navbar {
+    gap: 1.3rem; 
+    font-size: 1rem; 
+  }
+  .dropbtn {
+    text-align: center; 
+  }
+  div.goals {
+    margin-right: 15px; 
+    margin-left: 15px; 
   }
 }
 
