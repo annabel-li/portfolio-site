@@ -339,7 +339,7 @@ div.goals {
 
 @media (max-width: 768px) {
   .flex-item-right, .flex-item-left {
-    flex: 95%;
+    flex: 90%;
     display: block;
     margin: 0 auto;  
   }
@@ -370,7 +370,7 @@ div.goals {
     margin-left: 15px; 
   }
   .project_preview {
-    width: 100%; 
+    width: 90%; 
   }
   header.hero h1 {
     font-size: 3rem; 
