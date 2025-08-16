@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Portfolio</title>
+</head>
+<body>
+
+  <header class="hero", style="background: url('site-images/formula_banner_photo.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Annabel Li</h1>
+    <p> Machine Learning | Hardware | Mechanical Design</p>
+  </div>
+</header>
+
+<div class="navbar">
+    <a href="#aboutme">Home</a>
+    <div class="dropdown">
+          <!--<a href="#projects"></a>--> 
+          <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+              <a href="beam_wing_page.html">UBC Formula Projects</a>
+              <a href="ml_atlas_page.html">Machine Learning with ATLAS</a>
+          </div>
+    </div>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<main id="aboutme">
+<h2 class="about-heading">About Me</h2>
+    <div class="about-box">
+      <p>
+        Welcome to my engineering portfolio! My name is Annabel Li and I'm an undergraduate Engineering Physics student at the University of British Columbia.
+      </p>
+      <p>
+        I'm passionate about interdisciplinary projects - especially those involving software with physical applications - and love tackling new challenges. I am currently an ATLAS Deep-Learning Research Assistant at <a href="https://triumf.ca/">TRIUMF</a>, Canada's particle physics center, where I'm studying the optimization and implementation of neural networks on hardware for the the <a href="https://home.cern/science/accelerators/large-hadron-collider">Large Hadron Collider</a> in Switzerland.
+    </p>  
+    <p>
+        In addition to my work in machine learning, I also have hands-on mechanical experience as an aerodynamics member on <a href="https://www.formulaubc.com/">UBC Formula SAE</a>. Our team designs and builds a Formula One-style racecar from the ground up to compete at the the <a href="https://www.sae.org/attend/student-events/formula-sae-michigan/">international SAE event in Michigan</a> each May, a rigorous design cycle that involves testing, simulation, manufacturing, and validation. Last season, I designed and manufactured the beam wing for the 2025 vehicle, increasing rear wing downforce by ~10%.
+    </p>  
+    <p>
+        If you have any questions about my work, or just want to <a href="#contact">reach out,</a> feel free to connect - I'd love to hear from you! 
+    </p> 
+    </div>
+
+    <br> 
+    <section id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="flex-container">
+        <div class="flex-item-left"> 
+          <div class="project-preview">
+                <a href="beam_wing_page.html">
+                  <img src="site-images/beamwingcfd.png" alt="Beam wing CFD used in airfoil selection" style="cursor:pointer;" width="375px" height="250px">
+                </a>
+              <h3>Beam Wing for UBC Formula SAE</h3>
+            </div>
+          </div>      
+            <div class="flex-item-right"> 
+              <div class="project-preview">
+              <a href="ml_atlas_page.html">
+                <img src="site-images/atlasbeam.png" alt="Image of a particle collision in the ATLAS detector" width="auto" height="250px" style="cursor:pointer;">
+              </a>
+            <h3>Machine Learning with ATLAS</h3>
+              <p class="image-credit">
+              Image credit: <a href="https://cds.cern.ch/record/2931344" target="_blank">Official CERN webpage</a>
+              </p> 
+          </div>
+        </div>
+    </div>
+
+    </section>
+    <br>    
+    <section id="skills">
+        <div>
+          <h2 class="section-title">Skills</h2>
+            <div class="flex-container">
+              <div class="flex-item-left">
+                <ul>
+                  <p><strong>Programming</strong><br/></p>
+                    <li style = "margin-left: 25px;">Python</li>
+                    <li style = "margin-left: 25px;">Tensorflow and Keras (machine learning)</li>
+                    <li style = "margin-left: 25px;">C/C++</li>
+                    <li style = "margin-left: 25px;">Git</li>
+                    <li style = "margin-left: 25px;">NumPy</li>
+                </ul>
+            </div>
+            <div class="flex-item-right", style = "margin-left: 15px;">
+            <ul>
+              <p><strong>Engineering Design</strong><br/></p>
+                <li style="margin-left: 25px;">SolidWorks</li>
+                <li style = "margin-left: 25px;">Star CCM+</li>
+                <li style = "margin-left: 25px;">Vitis and Vivado</li>
+                <li style = "margin-left: 25px;">Machining (CNC)</li>
+                <li style = "margin-left: 25px;">Fabrication with composites</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="flex-container", style="align-items: center; gap: 1.5rem; justify-content: center;"> 
+        <a href="https://github.com/annabel-li" target="_blank"><img src="site-images/gitlogo.jpeg" alt="GitHub logo", width="50px", height="auto"></a>
+        <a href="mailto:li.annabel47@gmail.com" target="_blank"><img src="site-images/emaillogo2.jpeg" alt="Email logo", width="50px", height="auto"></a>
+        <a href="http://www.linkedin.com/in/annabel-li-ubc" target="_blank"><img src="site-images/linkedinlogo.jpeg" alt="LinkedIn logo", width="50px", height="auto"></a>
+      </div>
+      <!-- <h2 class="section-title">Contact</h2>
+      <div class="flex-text">
+        <p>Email: <a href="mailto:li.annabel47@gmail.com" target="_blank">li.annabel47@gmail.com</a></p>
+        <p>LinkedIn: <a href="http://www.linkedin.com/in/annabel-li-ubc" target="_blank">linkedin.com/annabel-li-ubc</a></p>
+        <p>GitHub: <a href="https://github.com/annabel-li" target="_blank">github.com/annabel-li</a></p>
+      </div> --> 
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Annabel Li. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    
+
+  </script>
+</body>
+</html> 
