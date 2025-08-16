@@ -220,6 +220,8 @@ img.responsive_small {
 
  .project-preview img {
     object-fit: cover;
+    display: block;
+    margin: 0 auto; 
 }
 
 .project-preview h3 {
