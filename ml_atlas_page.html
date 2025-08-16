@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Portfolio</title>
+  <script src="https://kit.fontawesome.com/e15dd5e196.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="hero" style="background: url('atlas detector.jpg') center/cover no-repeat;">
+  <div class="overlay" style="background-color: rgba(0, 0, 0, 0.6);"></div>
+  <div class="hero-content">
+    <h1>Machine Learning with ATLAS</h1>
+    <p>Image credit: <a href="https://www.home.cern/science/experiments/atlas"> CERN</a></p>
+  </div>
+</header>
+
+<div class="navbar">
+    <a href="portfolio_home.html">Home</a>
+    <div class="dropdown">
+          <!--<a href="#projects"></a>--> 
+          <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+              <a href="beam_wing_page.html">UBC Formula Projects</a>
+              <a href="ml_atlas_page.html">Machine Learning with ATLAS</a>
+          </div>
+    </div>
+    <a href="portfolio_home.html#skills">Skills</a>
+    <a href="portfolio_home.html#contact">Contact</a>
+</div>
+
+<main>
+    <div class="about-box">
+            <i>Collaborated with researchers and grad students to develop and implement neural networks for the Large Hadron Collider's
+                forthcoming upgrade, while independently studying network parameterizations for hardware optimization. I presented my 
+            work at TRIUMF's Science week, <b>earning third place</b> among all student age groups (undergraduate and graduate). I was granted
+        this opportunity as a recipient of the <a href="https://phas.ubc.ca/erich-vogt-first-year-summer-research-experience-fysre">
+            <b>Eric Vogt First Year Summer Research Experience Award.</b></a></i>
+    </div>
+    <div class="flex-container">
+        <img src="sw2025_2.png", alt="My poster presentation at Science Week", width="700px", height=auto, style="padding: 15px;">
+    </div>
+    <p style="text-align: center; margin-bottom: 25px;">
+        <i>Presenting my poster at Science Week.</i>
+    </p>
+    <p style="text-align: center; padding: 6px;">
+        <strong>Affiliated with: </strong>TRIUMF <a href="https://triumf.ca">(Canada's Particle Accelerator Center),</a> UBC ATLAS Group
+    </p>
+    <p style="text-align: center; padding: 6px;">
+        <strong>Project timeline:</strong> May - Sept. 2025
+    </p>
+    <p style="text-align: center; padding: 6px;">
+        <strong>Key technical skills:</strong> Machine learning & numerical analysis with Python (Keras, NumPy); Git; FPGAs; Vitis & Vivado 
+    </p> 
+
+    <br>
+    <hr>
+    <br>
+    <div>
+    <h2 class="about-heading">Project Recap</h2>
+        <p style="text-align: center; margin-right: 30px; margin-left: 30px; margin-bottom: 40px;"><i> 
+            Check out the <a href="#glossary">More About Particle Physics</a> 
+            section at the bottom of the page for further background. Key terms are also hyperlinked in the text.</i>
+        </p>
+        <p>
+            By 2030, the Large Hadron Collider (LHC) - the largest <a href="#pa">particle accelerator</a> in the world - will undergo the "High-Luminosity" 
+            upgrade, increasing the number of particle collisions per second by more than three times. With current collision rates already generating 
+            hundreds of terabytes of data per second, the <a href="#trigger">trigger,</a> or the hardware system that decides which information to keep and 
+            which to discard, must be made more efficient, accurate, and resource-conscious.   
+        </p> 
+        <p>
+            This, however, is no trivial task. Today's trigger system already struggles with the data rate; data may be discarded 
+            before it is even read, and certain events, such as hadronic showers, are often reconstructed incorrectly, meaning that particles 
+            are tagged with the wrong energies. 
+        </p>
+        <h3 class="about-heading" style="text-align: left; margin-left: 10px; font-size: 1.5rem; margin-bottom: 0rem; margin-top: 0.4rem;">The frontrunning solution? Machine learning.</h3>
+        <p>
+            Neural networks perform well in particle identification and energy reconstruction and can be 
+            compartmentalized, allowing the system's <a href="#trigger">FPGAs</a> to run simultaneous calculations with different parts. However, there's a 
+            problem - it's not possible to perfectly convert software-based machine learning models into a version that can be implemented on hardware, 
+            due to differences in the way that numbers are represented, and the necessity to balance latency and resource usage. 
+        </p>  
+        <p>  
+            On a computer, where we train our models with Python, (specifically with the Tensorflow and Keras frameworks), numbers are represented as floats. Given a fixed number of bits, 
+            the decimal point can "float", meaning the system can represent both very large and very precise numbers. On hardware, though, the quantity of bits
+            allocated to the integer and decimal portion of each number is fixed, reducing the range and precision of numbers that can be represented. 
+            (This process of converting from float to fixed-point is called "quantization.")
+            While it is still possible to represent numbers with greater precision by increasing the total 
+            quantity of bits used, this eats up hardware resources and slows down computation. And given that the hardware trigger system must decide if an event 
+            is worth keeping within 10 microseconds, this may not be worth the trade-off if it only yields a negligible increase in accuracy.
+        </p>
+        <h3 class="about-heading" style="text-align: left; margin-left: 10px; font-size: 1.5rem; margin-bottom: 0rem; margin-top: 0.4rem;">
+            My work</h3>
+            <p>
+                Minimizing the loss from the software-to-hardware process was my focus this term. Working with the <a href="#atlas">UBC ATLAS group, </a> 
+                I conducted independent studies on how different parameterizations of the same machine learning model - such as changing fixed-point precision 
+                and the number of nodes, or mathematical operations, in the model's layers - impacted the performance of its hardware-compatible version. I also 
+                gained hands-on experience in programming directly onto the hardware itself, using Xilinx Vitis and Vivado to test the C++ code on a physical FPGA. 
+            </p>
+        <h3 class="about-heading" style="text-align: middle; margin-left: 10px; font-size: 1.2rem; margin-bottom: 1rem; margin-top: 0.4rem;">
+            Results</h3>
+            <div style="text-align: left; margin-left: 80px; margin-right: 80px;">
+                <p>
+                    <i class="fa-solid fa-circle-check"></i> Hardware-friendly equivalents of larger models (higher number of nodes) deviate more significantly from their 
+                        original Keras counterparts at lower precisions than smaller models. 
+                </p>
+                <p style="text-align: left">
+                    <i class="fa-solid fa-circle-check", style="text-align: left;"></i> Conversion accuracy increases with larger total bitwidth precision, but saturates after ~25 bits. 
+                </p>
+            </div>
+            <div class="flex-container", style="padding: 20px; margin-bottom: 30px;">
+                <img src="mpegraph.png", alt="Mean Percent Error between Keras model output and hls4ml model output, varying total bit precision", width="700px">
+            </div>
+                 
+
+
+             
+        <div class="flex-container">
+            <div class = "flex-item-left"> 
+                <img src="atlaspres.png" alt="Screenshot of a talk I gave for the ATLAS Summer Student presentation session" height=auto, width="375px", style="margin-top: 50px;">
+            </div>
+            <div class = "flex-item-right", style="margin-left: 0px;"> 
+                <h3 class="about-heading" style="text-align: left; margin-left: 10px; font-size: 1.2rem; margin-bottom: 1rem; margin-top: 0.4rem;">
+                Key deliverables</h3>
+                <p>
+                    Presentation, collaboration, and initiative were large parts of my role, as I had weekly meetings with my supervisors (Colin Gay, Wojtek Fedorko, Max Swiatlowski)
+                    to present my findings and discuss next steps. 
+                    At the end of July, I had the privilege to communicate my findings in a poster for TRIUMF's Science Week, earning third place among all student 
+                    age groups. You can view the full final version of my poster <a href="Annabel Li - Student Poster.pdf" target="_blank">here.</a>
+                </p>
+                <p style="text-align: left; font-size: 14px; color: grey;">
+                    <i>Right: slide from a talk I gave for the ATLAS summer student presentation series</i>
+                </p>
+            </div>
+
+        </div>      
+    </div>
+    <br>
+    <br>
+  
+    <!--<div class = "flex-container">
+        <img src="aestheticbackphoto.jpg", alt="2025 car unveiling event", style="height: auto; width: 600px;">
+    </div> -->
+
+    <section id="glossary">
+        <h2 class="about-heading", style="padding: 5px; margin-top: 40px; text-align: left;">More About Particle Physics</h2>
+        <hr><br>
+        <div class="flex-container"> 
+            <dl>
+                <dt id="pa">What is a particle accelerator and why is it important?</dt>
+                    <dd>A particle accelerator is a large apparatus that accelerates charged particles like electrons or protons to over 99.99%
+                        the speed of light, with the intent to see what happens when they collide. Energy can be converted to mass (as per Einstein's famous
+                        <i>E = mc<sup>2</sup></i>), so by smashing them together at high speeds, we can create new, rare particles 
+                        that help us better understand the physical laws of the universe.</dd>
+                <dt id="atlas">What is ATLAS?</dt>
+                        <dd>ATLAS, (or "<b>A</b> <b>T</b>oroidal <b>L</b>arge Hadron Collider <b>A</b>pparatus") is the name of the detector located in the Large Hadron 
+                            Collider (LHC) in Geneva, Switzerland. 46 meters long and 25 meters in diameter, it's the barrel-shaped instrument in which particle collisions occur, 
+                            and consists of complex components, like our trigger system, that allow us to measure and read back the details of collision events. 
+                            <br>
+                            The ATLAS group is one of the largest scientific collaborations in the world, spanning 42 countries and 245 institutes (UBC included!)</dd>
+                <dt id="trigger">Can you tell me more about the trigger system in the ATLAS detector?</dt>
+                    <dd> <!--The trigger is instrumental to the LHC; it selects only the most interesting events to send downstream for further analysis, 
+                        reducing the throughput and the associated computational costs. 
+                        <br>  -->                       
+                        The trigger system at the LHC consists of two parts: the L0 system, which is hardware-based, and the L1 system, 
+                        which is software-based. The L0 system is located in the detector itself, and consists of 
+                        Field-Programmable Gate Arrays (FPGAs), which are small, programmable circuits on boards. Its job is cut down the incoming
+                        data rate from 40MHz to 1MHz in 10 microseconds. The data that makes the cut is then transferred to the L1 system, where more 
+                        advanced reconstruction and analysis methods are used.  
+                    </dd>
+            </dl>
+        </div>
+
+
+</main> 
+
+    <br>
+    <br>
+
+  <footer>
+    &copy; 2025 Annabel Li. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

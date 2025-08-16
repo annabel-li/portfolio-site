@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Portfolio</title>
+  <script src="https://kit.fontawesome.com/e15dd5e196.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="hero" style="background: url('fullcar.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>UBC Formula Projects</h1>
+  </div>
+</header>
+
+<div class="navbar">
+    <a href="portfolio_home.html">Home</a>
+    <div class="dropdown">
+          <!--<a href="#projects"></a>--> 
+          <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+              <a href="beam_wing_page.html">UBC Formula Projects</a>
+              <a href="ml_atlas_page.html">Machine Learning with ATLAS</a>
+          </div>
+    </div>
+    <a href="portfolio_home.html#skills">Skills</a>
+    <a href="portfolio_home.html#contact">Contact</a>
+</div>
+
+<main>
+    <h2 class="about-heading">Beam Wing (2024-2025)</h2>
+    <div class="about-box">
+            <i>A lightweight aerodynamic component designed to enhance cornering performance and driver handling, designed for the 2024-2025 UBC Formula SAE vehicle.</i>
+    </div>
+    <div class="flex-container">
+        <img src="beamwing.jpg", alt="Image of beam wing on the final car", width="700px", height=auto, style="padding: 15px;">
+    </div>
+    <p style="text-align: center; margin-bottom: 25px;">
+        <i>Beam wing (yellow element) shown above on the final 2025 vehicle.</i>
+    </p>
+    <p style="text-align: center; padding: 6px;">
+        <strong>Affiliated with: </strong>University of British Columbia - <a href="https://www.formulaubc.com/">Formula SAE</a> design team 
+    </p>
+    <p style="text-align: center; padding: 6px;">
+        <strong>Project timeline:</strong> Sept. 2024 - May 2025 
+    </p>
+    <p style="text-align: center; padding: 6px;">
+        <strong>Key technical skills:</strong> SolidWorks, Star CCM+, CNC machining, carbon fiber 
+    </p> 
+
+    <br>
+    <hr>
+    <br>
+    <div>
+    <h2 class="about-heading">Context</h2>
+        <p style="text-align: middle; padding: 5px; margin-right: 30px; margin-left: 30px;"> Racecar aerodynamics has two main goals: maximize downforce (which increases grip), while minimizing drag. 
+            A beam wing is a small, isolated element located on the rear wing of the car, which can boost downforce with minimal contributions to drag.
+        </p> 
+    </div>
+    <br>
+
+    <div>
+        <h2 class="about-heading">Goals</h2>
+            <div class="flex-container">
+                <p style="text-align: center; padding: 5px; margin-right: 30px; margin-left: 30px;">
+                    <i class="fas fa-pen-to-square"></i>
+                    Improve the vehicle's aerodynamic balance by appreciably increasing rear downforce 
+                </p>
+                <p style="text-align: center; padding: 5px; margin-right: 30px; margin-left: 30px;">
+                    <i class="fas fa-pen-to-square"></i>
+                    Design a component that minimially impacts manufacturing timelines and cost
+                </p>
+                <!--<div class="flex-item-right">
+                    <img src="fullcar.jpg", alt="2025 team vehicle, ready for competition", style="height: 200px; width: 350px;">
+                </div> -->
+            </div>
+    </div>
+    <br>
+
+    <h2 class="about-heading", style="padding: 10px;">Process</h2>
+     <div class="flex-container">
+        <div class="flex-item-left">
+            <img src="fullcarcad.png", alt="Full car CAD during the design cycle (SolidWorks)", style="height: 200px; width: 375px;">
+        </div>
+        <div class="flex-item-right">
+            <p style="margin-bottom: 10px;"><b>Sept. - Dec 2025: </b></p>
+                <ul>
+                    <li>Examined last year's configuration and supplemented with external research to identify potential designs</li>
+                    <li>Configured designs with CAD (SolidWorks), using Star CCM+ to test and analyze results</li>
+                    <li>Presented findings in weekly meetings and in a team-wide design review in November, incorporating feedback and updating workflows in context of other members' reports</li>
+                </ul>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="flex-container">
+        <div class="flex-item-left", style="margin-bottom: 30px;">
+            <p style="margin-bottom: 10px;"><b>Jan. -  May 2025: </b></p>
+                <ul>
+                    <li>Cut, glued, and CNCed airfoil molds out of MDF</li>
+                    <li>Used molds to perform carbon fiber layups, adding internal structures after curing</li>
+                </ul>
+        </div>
+        <div class="flex-item-right">
+            <img src="manufacturing.jpg", alt="Performing carbon fiber layups", style="height: auto; width: 400px; margin-left: 15px;">
+        </div>
+    </div> 
+
+    <br>
+    <div>
+        <h2 class="about-heading", style="margin-top: 20px;">Impacts & Reflection</h2>
+        <ul style="padding: 10px; margin-bottom: 30px;">
+            <li>Increased rear wing downforce by ~10%</li>
+            <!-- <li>Driver feedback found the vehicle easier to navigate (less under/over steer??) </li> -->
+            <li>Learned how to optimize standalone designs holistically, considering system-wide integration and time and manufacturing costs</li>
+        </ul>
+    </div>
+    <div class = "flex-container">
+        <img src="aestheticbackphoto.jpg", alt="2025 car unveiling event", style="height: auto; width: 600px;">
+    </div>
+</main> 
+<!--YOUR FOOTER WASN'T EXTENDING ALL THE WAY BECAUSE YOU DIDN'T CLOSE MAIN!!-->
+    <br
+    ><br>
+
+  <footer>
+    &copy; 2025 Annabel Li. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
