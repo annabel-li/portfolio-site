@@ -348,7 +348,7 @@ div.goals {
     height: auto; 
   }
   .navbar {
-    gap: 1.3rem; 
+    gap: 1.1rem; 
     font-size: 1rem; 
   }
   .dropbtn {
@@ -357,6 +357,9 @@ div.goals {
   div.goals {
     margin-right: 15px; 
     margin-left: 15px; 
+  }
+  .project_preview {
+    width: 100%; 
   }
 }
 
