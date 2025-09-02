@@ -345,6 +345,9 @@ div.goals {
     display: block;
     margin: 0 auto;  
   }
+  .navbar {
+    gap: 2rem; 
+  }
   li {
     margin-left: 20px; 
     margin-right: 20px; 
