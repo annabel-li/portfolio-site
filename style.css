@@ -345,9 +345,6 @@ div.goals {
     display: block;
     margin: 0 auto;  
   }
-  .navbar {
-    gap: 2rem; 
-  }
   li {
     margin-left: 20px; 
     margin-right: 20px; 
@@ -383,6 +380,9 @@ div.goals {
   header.hero p {
     font-size: 14px; 
   }
+    body {
+        width: 90%; 
+    }
 
 }
 
