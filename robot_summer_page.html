@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Portfolio</title>
+  <script src="https://kit.fontawesome.com/e15dd5e196.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="hero" style="background: url('site-images/robot_summer_hero.jpg') center/cover no-repeat;">
+  <div class="overlay" style="background-color: rgba(0, 0, 0, 0.6);"></div>
+  <div class="hero-content">
+    <h1>ENPH253: Robot Summer</h1>
+  </div>
+</header>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Projects</button>
+        <div class="dropdown-content">
+            <a href="beam_wing_page.html">UBC Formula Projects</a>
+            <a href="ml_atlas_page.html">Machine Learning with ATLAS</a>
+            <a href="robot_summer_page.html">Robot Summer</a>
+        </div>
+    </div>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- =============================== INTRO =============================== -->
+
+  <div class="about-box">
+    <p>
+      <i>
+        Every year, UBC’s Engineering Physics program throws second-year students into a trial by fire
+        where they work in groups of four to build fully autonomous, competition-ready robots from scratch
+        in five weeks. This year, robots had to compete in a 
+        "Martian Habitat” themed challenge, facing off
+        head-to-head to complete as many tasks as possible - from assembling a habitat, to building a tower,
+        detecting and acquiring metal rocks, and using computer vision to detect teletubbies - all within the
+        time limit of two minutes. 
+        <i>(See the CityNews segment about our competition <a href="https://www.youtube.com/watch?v=TM1KbP9_ZlY">here.</a>)</i>
+      </i>
+    </p>
+  </div>
+
+  <div class="flex-container">
+    <!-- Replace with photo of your complete robot -->
+    <img
+      src="site-images/robot_summer_robot.jpg"
+      class="responsive_medium"
+      alt="Ody the Noodle, our Robot Summer competition robot"
+      style="padding: 15px;"
+    >
+  </div>
+
+  <p style="text-align: center; margin-bottom: 25px;">
+    <i>Our robot: Ody the Noodle.</i>
+  </p>
+
+  <p style="text-align: center; padding: 6px;">
+    <strong>Affiliated with: </strong>UBC Engineering Physics
+  </p>
+
+  <p style="text-align: center; padding: 6px;">
+    <strong>Project timeline:</strong> May - Aug. 2026
+  </p>
+
+  <p style="text-align: center; padding: 6px;">
+    <strong>My role:</strong> Mechanical design, embedded controls, and system integration
+  </p>
+
+  <p style="text-align: center; padding: 6px;">
+    <strong>Key technical skills:</strong> CAD; rapid prototyping; ESP32; C++; PWM; servo control
+  </p>
+
+  <br>
+  <hr>
+  <br>
+
+
+  <!-- =============================== THE ROBOTIC ARM =============================== -->
+
+  <div>
+    <h2 class="about-heading">The Robotic Arm</h2>
+
+      <div class="flex-container">
+      <img
+        src="site-images/robot_summer_arm_cad.jpg"
+        class="responsive_medium"
+        alt="Screenshot of the arm assembly CAD in OnShape"
+        style="padding: 15px;"
+      >
+      </div>
+      <p style="text-align: center; margin-bottom: 25px;">
+      <i>Image of the arm assembly CAD in OnShape</i>
+    </p>
+
+    <p>
+      With this year’s emphasis on “pick-and-place” tasks, it was essential to develop a
+       robust and consistent manipulation system
+       - which is where my work came into play. Over the course
+      of the term, I developed a 5-DOF manipulator for our robot, from mechanical design and assembly to actuator
+      integration and software motion control. I emphasized simplicity and modularity in the arm's design,
+      allowing my team to test, iterate, and adapt quickly, producing a robot that could execute rock picking,
+      tower building, and solar panel uncovering sequences by competition day.
+    </p>
+
+    <p>
+      All design, actuator, and material choices were optimized based on the following criteria:
+    </p>
+
+    <ul>
+      <li>Modular mechanical interfaces</li>
+      <li>Rapid manufacturability and assembly</li>
+      <li>Sufficient reach for competition tasks</li>
+      <li>Adequate actuator torque</li>
+      <li>Stiffness to mass ratio</li>
+      <li>Secure gripping across payload geometries</li>
+    </ul>
+
+
+    <!-- =============================== DESIGN PROCESS =============================== -->
+
+    <h3 class="about-heading"
+        style="text-align: left; margin-left: 10px; font-size: 1.5rem;
+               margin-bottom: 0rem; margin-top: 0.4rem;">
+      The Design Process
+    </h3>
+
+    <p>
+      Knowing the time constraints and the benefits of rapid prototyping, I designed the arm modularly
+      so that individual links and components could be replaced or modified without redesigning the
+      entire mechanism. Linkages were 3D-printed or laser-cut, enabling design changes to move quickly
+      from CAD to physical testing in response to the limitations discovered during integration.
+    </p>
+
+
+    <!-- =============================== END EFFECTOR =============================== -->
+
+    <h3 class="about-heading"
+        style="text-align: left; margin-left: 10px; font-size: 1.5rem;
+               margin-bottom: 0rem; margin-top: 0.4rem;">
+      Designing the End Effector
+    </h3>
+
+    <p>
+      The most notable change that occurred throughout the design cycle was the structure of the end effector.
+    </p>
+
+    <p>
+      Initially, I created a translational rack-and-pinion gripper with adaptive fingers that could conform
+      to objects of different shapes and sizes. While this was a strong and robust idea on paper, the
+      resulting claw was incredibly bulky, heavy, and time-consuming to assemble, and was over-engineered
+      for the context of the competition.
+    </p>
+
+    <div class="flex-container">
+      <!-- Replace with image of original rack-and-pinion gripper -->
+      <img
+        src="site-images/robot_summer_old_gripper.jpg"
+        class="responsive_medium"
+        alt="Initial rack-and-pinion adaptive gripper design"
+        style="padding: 15px;"
+      >
+    </div>
+
+    <p style="text-align: center; margin-bottom: 25px;">
+      <i>Initial rack-and-pinion gripper design.</i>
+    </p>
+
+    <p>
+      This pushed me to take a step back and reconsider the design priorities of the project. Thus, for
+      the final design, I went with a simple, two-finger gripper, driven by a single servo and two meshed
+      gears. The V-prongs at the ends enabled consistent, stable gripping of the cylindrical “tower”
+      pieces as well as the thin ring attachment to the solar panel cover, and the fingers’ long, curved
+      geometry provided multiple contact points when picking up rocks.
+    </p>
+
+    <div class="flex-container">
+      <!-- Replace with close-up image of final gripper -->
+      <img
+        src="site-images/robot_summer_gripper.jpg"
+        class="responsive_medium"
+        alt="Final two-finger robotic gripper"
+        style="padding: 15px;"
+      >
+    </div>
+
+    <p style="text-align: center; margin-bottom: 25px;">
+      <i>Final two-finger gripper.</i>
+    </p>
+
+
+    <!-- =============================== SYSTEM INTEGRATION =============================== -->
+
+    <h2 class="about-heading">System-level Integration</h2>
+
+
+    <!-- =============================== MOTION CONTROL =============================== -->
+
+    <h3 class="about-heading"
+        style="text-align: left; margin-left: 10px; font-size: 1.5rem;
+               margin-bottom: 0rem; margin-top: 0.4rem;">
+      Motion Control Stack
+    </h3>
+
+    <p>
+      To control all six servos reliably, I wrote a custom PWM library for the ESP32 after initial tests
+      with the standard Arduino Servo libraries caused servo jitter and intermittent failures to respond.
+      The resulting control system allowed me to coordinate multiple joints and build higher-level motion
+      sequences on top of the low-level servo control.
+    </p>
+
+
+    <!-- =============================== JOINT CHOREOGRAPHY =============================== -->
+
+    <h3 class="about-heading"
+        style="text-align: left; margin-left: 10px; font-size: 1.5rem;
+               margin-bottom: 0rem; margin-top: 0.4rem;">
+      Joint Choreography
+    </h3>
+
+    <p>
+      Because the competition objects were located at known positions, I used calibrated joint angles
+      rather than dynamically planning trajectories during each run. To write, test, and debug these
+      sequences, I hosted a UI on the ESP32 complete with live joint telemetry and jogging controls to
+      adjust the arm’s position in real time. Once saved, these positions were coded into repeatable
+      sequences for the competition tasks.
+    </p>
+
+    <p>
+      Integration with the robot-level state machine was accomplished through navigation information fed
+      in from the robot’s other systems, such as tape or positional sensor data. When the robot reached
+      the appropriate checkpoint, the corresponding arm sequence would be executed. This separation
+      between navigation and manipulation kept the arm relatively self-contained while allowing it to
+      respond to the robot's overall state. It also made sequences easy to update when the robot's route
+      or other subsystems changed.
+    </p>
+
+    <div class="flex-container">
+      <div class="flex-item-left">
+        <!-- Replace with screenshot of your browser UI -->
+        <img
+          src="site-images/robot_summer_ui.jpg"
+          alt="Browser-based control interface for the robotic arm"
+          class="responsive_small"
+        >
+      <p style="text-align: center; margin-bottom: 25px;">
+          <i>Image of robot arm UI</i>
+      </p>
+      </div>
+      <div class="flex-item-right">
+        <!-- Replace with screenshot of relevant code -->
+        <img
+          src="site-images/robot_summer_code.jpg" 
+          alt="C++ motion control code for the robotic arm"
+          class="responsive_small"
+        >
+      <p style="text-align: center; margin-bottom: 25px;">
+          <i>Excerpt from tower-building sequence code</i>
+      </p>
+      </div>
+    </div>
+
+
+    <!-- =============================== RESULT =============================== -->
+
+    <h2 class="about-heading">The Result</h2>
+
+    <p>
+      By competition day, the arm could reliably execute all the sequences required for our team strategy:
+    </p>
+
+    <ul>
+      <li>Identifying and picking up metallic rocks</li>
+      <li>Building the tower</li>
+      <li>Uncovering the solar panels</li>
+    </ul>
+
+    <p>
+      The arm demonstrated particularly strong and consistent performance during tower construction,
+      where repeatable positioning and reliable manipulation were critical. The final system successfully
+      executed the planned arm sequences under competition conditions.
+    </p>
+
+    <div class="flex-container">
+      <!-- Replace with competition-day tower-building video -->
+      <video
+        class="responsive_medium"
+        controls
+        style="padding: 15px;"
+      >
+        <source src="site-images/robot_summer_tower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <p style="text-align: center; margin-bottom: 25px;">
+      <i>Competition-day tower construction.</i>
+    </p>
+
+
+    <!-- =============================== REFLECTION =============================== -->
+
+    <h2 class="about-heading">Reflection</h2>
+
+    <p>
+      Through my experience with Robot Summer, I learned that simpler designs are often the most effective,
+      particularly when engineering under tight time constraints and as part of a larger team. My original
+      adaptive gripper was technically interesting and it moved well, but solved a more complicated problem
+      than the competition actually presented, and its mass and size hampered the arm’s ability to move
+      comfortably and reliably. The simple two-prong claw ultimately accomplished the required tasks while
+      being substantially easier to manufacture and integrate; choosing this design earlier could have freed
+      additional time for testing and system integration.
+    </p>
+
+    <p>
+      Overall, Robot Summer was an invaluable exercise in systems-level engineering, teamwork, and optimizing
+      designs for reliability and performance under tight time constraints. The opportunity to move between
+      mechanical design, manufacturing, embedded software, electronics, controls, and integration and testing
+      was incredibly exciting, and I’m looking forward to taking on more robotics and systems-related
+      challenges in the future.
+    </p>
+
+  </div>
+
+</main>
+
+<br>
+<br>
+
+<footer>
+  &copy; 2026 Annabel Li. All rights reserved.
+</footer>
+
+</body>
+</html>
